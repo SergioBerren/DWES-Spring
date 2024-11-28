@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resultados del Formulario</title>
+</head>
+
+<body>
+	<div>
+		<h2>Datos del Formulario</h2>
+		<table>
+			<tr>
+				<td>Nombre</td>
+				<td th:text="${formulario.nombre}"></td>
+			</tr>
+			<tr>
+				<td>Primer Apellido</td>
+				<td th:text="${formulario.primerApellido}"></td>
+			</tr>
+			<tr>
+				<td>Segundo Apellido</td>
+				<td th:text="${formulario.segundoApellido}"></td>
+			</tr>
+			<tr>
+				<td>Correo Electrónico</td>
+				<td th:text="${formulario.email}"></td>
+			</tr>
+			<tr>
+				<td>Fecha de Nacimiento</td>
+				<td th:text="${formulario.fechaNacimiento}"></td>
+			</tr>
+			<tr>
+				<td>Sexo</td>
+				<td th:text="${formulario.sexo}"></td>
+			</tr>
+			<tr>
+				<td>Dirección</td>
+				<td th:text="${formulario.direccion}"></td>
+			</tr>
+			<tr>
+				<td>Nivel de Estudios</td>
+				<td th:text="${formulario.nivelEstudios}"></td>
+			</tr>
+			<tr>
+				<td>Temas de Interés</td>
+				<td>
+					<ul>
+						<li th:each="tema : ${formulario.temasInteres}" th:text="${tema}"></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div>
+		<a href="/formulario">Volver atrás</a>
+	</div>
+</body>
+
+</html>

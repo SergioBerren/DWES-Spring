@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Formulario crear usuario</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Formulario</h1>
+    <form action="#" th:action="@{/formulario}" th:object="${formulario}" method="post">
+    	<p>Id: <input type="text" th:field="*{id}" /></p>
+        <p>Mensaje: <input type="text" th:field="*{contenido}" /></p>
+        <p><input type="submit" value="Enviar" /> <input type="reset" value="Reiniciar" /></p>
+    </form>
+</body>
+</html>

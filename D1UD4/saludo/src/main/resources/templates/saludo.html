@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Página Saludo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<p th:text="|¡¡¡Hola, ${name}!!!|" />
+	<!--name viene de un atributo name que ponemos en modelo.addAttribute("name", nombre);-->
+</body>
+
+</html>
