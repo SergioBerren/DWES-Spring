@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 12</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+		<h2>Pregunta 12: ¿Qué te da más paz?</h2>
+		<div th:if="${error}" class="error">
+			<p th:text="${error}">Error</p>
+		</div>
+		<form th:action="@{/enviar}" method="post">
+		    <input type="hidden" name="pregunta" value="12">
+		    <label><input type="radio" name="respuesta" value="1"> Estar en un parque</label><br>
+		    <label><input type="radio" name="respuesta" value="2"> Estar solo viendo un paisaje</label><br>
+		    <label><input type="radio" name="respuesta" value="3"> Bañarte</label><br>
+		    <label><input type="radio" name="respuesta" value="4"> Ver una chimenea</label><br>
+		    <button type="submit">Siguiente</button>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - Quiz</title>
+    <div th:if="${elemento == 'tierra'}">
+    	<link rel="stylesheet" href="/css/resultadoTierra.css">
+    </div>
+    <div th:if="${elemento == 'aire'}">
+    	<link rel="stylesheet" href="/css/resultadoAire.css">
+    </div>
+    <div th:if="${elemento == 'agua'}">
+    	<link rel="stylesheet" href="/css/resultadoAgua.css">
+    </div>
+    <div th:if="${elemento == 'fuego'}">
+    	<link rel="stylesheet" href="/css/resultadoFuego.css">
+    </div>
+</head>
+<body>
+    <div class="contenedor">
+        <h1 th:text="'¡Hola, ' + ${usuario.nombre} + ' ' + ${usuario.apellido} + '!'"></h1>
+        
+        <h2>Tu puntuación final es:</h2>
+        <h2 th:text="${puntuacion}">Puntuación</h2>
+        <h3>Te defines como </h3><br>
+        <h4 th:text="${descripcion}">Descripción</h4><br>
+        <h3>El elemento de la naturaleza que más te identifica es:</h3>
+        <h3 th:text="${elemento}">Elemento</h3>
+        
+        <!-- Imagen dinámica según el elemento -->
+        <div>
+            <img th:src="'/images/' + ${elemento.toLowerCase()} + '.jpg'" 
+                 th:alt="'Imagen de ' + ${elemento}" 
+                 class="imagen">
+        </div>
+    </div>
+</body>
+</html>

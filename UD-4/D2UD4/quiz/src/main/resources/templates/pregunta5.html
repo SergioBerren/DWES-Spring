@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 5</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+		<h2>Pregunta 5: ¿Qué elemento te hace sentir más cómodo?</h2>
+		<div th:if="${error}" class="error">
+			<p th:text="${error}">Error</p>
+		</div>
+		<form th:action="@{/enviar}" method="post">
+		    <input type="hidden" name="pregunta" value="5">
+		    <label><input type="radio" name="respuesta" value="1"> Tierra</label><br>
+		    <label><input type="radio" name="respuesta" value="2"> Aire</label><br>
+		    <label><input type="radio" name="respuesta" value="3"> Agua</label><br>
+		    <label><input type="radio" name="respuesta" value="4"> Fuego</label><br>
+		    <button type="submit">Siguiente</button>
+		</form>
+	</body>
+</html>

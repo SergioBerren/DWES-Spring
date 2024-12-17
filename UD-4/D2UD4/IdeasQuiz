@@ -1,0 +1,139 @@
+Presentación ✓
+textArea ✓
+CheckBox ✓
+RadioButton ✓
+Button ✓
+Select (desplegable.) ✓
+
+
+================================================================================
+
+PRESENTACIÓN:
+Nombre, apellido, edad...
+
+================================================================================
+
+¿Qué elemento primario eres?
+Pregunta 1:
+
+¿Cómo describes tu personalidad?
+a) Estable y confiable.
+b) Emocional y empática.
+c) Energética y apasionada.
+d) Creativa y libre.
+Pregunta 2:
+
+¿Qué actividad disfrutas más?
+a) Pasear en la montaña o estar en la naturaleza.
+b) Nadar o estar cerca del agua.
+c) Hacer deporte o participar en actividades competitivas.
+d) Leer, escribir o explorar nuevas ideas.
+Pregunta 3:
+
+¿Cómo reaccionas ante el estrés?
+a) Lo enfrento con calma y paciencia.
+b) Me afecta emocionalmente, pero busco consuelo.
+c) Me enfurezco, pero lo supero rápido.
+d) Busco reflexionar y hablar del tema.
+Pregunta 4:
+
+¿Cuál es tu estación favorita?
+a) Invierno.
+b) Primavera.
+c) Verano.
+d) Otoño.
+Pregunta 5:
+
+¿Qué tipo de clima prefieres?
+a) Fresco y tranquilo.
+b) Lluvioso o húmedo.
+c) Cálido y soleado.
+d) Ventoso y ligero.
+Pregunta 6:
+
+¿Cómo te ven los demás?
+a) Como alguien confiable y protector.
+b) Como alguien emocional y compasivo.
+c) Como alguien valiente y enérgico.
+d) Como alguien curioso y soñador.
+Pregunta 7:
+
+¿Qué colores te atraen más?
+a) Marrones, verdes.
+b) Azules, turquesas.
+c) Rojos, naranjas.
+d) Blancos, amarillos.
+Pregunta 8:
+
+¿Cómo resuelves los problemas?
+a) Con paciencia y lógica.
+b) Con intuición y empatía.
+c) Con rapidez y determinación.
+d) Con creatividad y análisis.
+Pregunta 9:
+
+¿Qué tipo de hogar prefieres?
+a) Uno acogedor y seguro.
+b) Uno cerca del agua o con plantas.
+c) Uno vibrante y lleno de energía.
+d) Uno con espacios abiertos y luz natural.
+Pregunta 10:
+
+¿Qué te motiva más en la vida?
+a) La estabilidad y la seguridad.
+b) Las relaciones y los sentimientos.
+c) Los retos y las metas.
+d) El aprendizaje y la libertad.
+
+================================================================================
+
+
+Resultados
+    - Mayoría de a): Tierra
+    - Mayoría de b): Agua
+    - Mayoría de c): Fuego
+    - Mayoría de d): Aire
+
+SUMAR TODAS DE 1 A 4
+
+================================================================================
+
+SELECT
+¿Qué actividad disfrutas más?
+
+    A) Pasear en la montaña o estar en la naturaleza.
+    B) Nadar o estar cerca del agua.
+    C) Hacer deporte o participar en actividades competitivas.
+    D) Leer, escribir o explorar nuevas ideas.
+
+SUMAR TODAS DE 1 A 4
+
+================================================================================
+
+CHECKBOX
+¿Qué características te describen mejor?
+(Marca todas las que apliquen)
+
+□ Soy estable y confiable.
+□ Soy emocional y empático/a.
+□ Soy energético/a y apasionado/a.
+□ Soy creativo/a y libre.
+
+SUMAR TODAS LAS RESPUESTAS +1 PUNTO
+
+================================================================================
+
+TEXT AREA
+◉ Describe cómo reaccionas cuando enfrentas un desafío difícil.
+◉ Alguna preguntra en la que el usuario tenga que escribir una serie de respuestas específicas
+
+================================================================================
+
+RESULTADO
+◉ Mostrar información pedida al principio del quiz
+◉ Mostrar puntuación y resultado
+
+================================================================================
+
+POSIBLE IDEA
+Usar símbolos gormiti para las imágenes
