@@ -1,0 +1,103 @@
+/* .contenedor {
+	 text-align: center;
+	 font-family: Arial, sans-serif;
+ }
+ */
+ /* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Fondo y centro del contenido */
+body {
+    background: linear-gradient(135deg, #6c7bff, #4d5af1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Contenedor principal */
+.contenedor {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Estilo de las etiquetas y campos de entrada */
+label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+    color: #e0e0e0;
+}
+
+/* Estilo de los inputs y textarea */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo del textarea */
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Efecto en los inputs y textarea cuando están en foco */
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4d5af1;
+    outline: none;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #4d5af1;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover del botón */
+button:hover {
+    background-color: #3a48d1;
+}
+
+/* Estilo para los campos de formulario */
+form {
+    margin-top: 20px;
+}
+
+/* Añadir algo de espaciado entre los elementos */
+form > * {
+    margin-bottom: 15px;
+}

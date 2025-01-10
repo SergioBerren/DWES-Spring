@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 13</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+		<h2>Pregunta 13: ¿Qué tipo de película prefieres?</h2>
+		<div th:if="${error}" class="error">
+			<p th:text="${error}">Error</p>
+		</div>
+		<form th:action="@{/enviar}" method="post">
+		    <input type="hidden" name="pregunta" value="13">
+			<label><input type="radio" name="respuesta" value="1"> Dramas tranquilos o películas de acción reflexiva.</label><br>
+			<label><input type="radio" name="respuesta" value="2"> Documentales o historias que despiertan la mente.</label><br>
+			<label><input type="radio" name="respuesta" value="3"> Películas emotivas o de aventuras acuáticas.</label><br>
+			<label><input type="radio" name="respuesta" value="4"> Películas de acción, épicas o con gran intensidad.</label><br>
+			<button type="submit">Siguiente</button>
+		</form>
+
+	</body>
+</html>
