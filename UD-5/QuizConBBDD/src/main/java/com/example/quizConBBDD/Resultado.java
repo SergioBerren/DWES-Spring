@@ -18,16 +18,19 @@ public class Resultado {
     @Column(nullable = false)
     private int puntuacion;
 
+    @Column(nullable = false)
+    private String descripcion;
+
     public Resultado() {
     }
 
-    public Resultado(String nombre, String elemento, int puntuacion) {
+    public Resultado(String nombre, String elemento, int puntuacion, String descripcion) {
         this.nombre = nombre;
         this.elemento = elemento;
         this.puntuacion = puntuacion;
+        this.descripcion = descripcion;
     }
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }
@@ -60,6 +63,14 @@ public class Resultado {
         this.puntuacion = puntuacion;
     }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
     @Override
     public String toString() {
         return "Resultado{" +
@@ -67,6 +78,7 @@ public class Resultado {
                 ", nombre='" + nombre + '\'' +
                 ", elemento='" + elemento + '\'' +
                 ", puntuacion=" + puntuacion +
+                ", descripcion='" + descripcion + '\'' +
                 '}';
     }
 }

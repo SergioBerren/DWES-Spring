@@ -6,18 +6,10 @@
     <title>Resultado - Quiz</title>
 
     <!-- Estilos dinámicos basados en el elemento -->
-    <div th:if="${resultado.elemento.equals('tierra')}">
-        <link rel="stylesheet" href="/css/resultadoTierra.css">
-    </div>
-    <div th:if="${resultado.elemento == 'aire'}">
-        <link rel="stylesheet" href="/css/resultadoAire.css">
-    </div>
-    <div th:if="${resultado.elemento == 'agua'}">
-        <link rel="stylesheet" href="/css/resultadoAgua.css">
-    </div>
-    <div th:if="${resultado.elemento == 'fuego'}">
-        <link rel="stylesheet" href="/css/resultadoFuego.css">
-    </div>
+	<link th:if="${resultado.elemento == 'tierra'}" rel="stylesheet" href="/css/resultadoTierra.css">
+	<link th:if="${resultado.elemento == 'aire'}" rel="stylesheet" href="/css/resultadoAire.css">
+	<link th:if="${resultado.elemento == 'agua'}" rel="stylesheet" href="/css/resultadoAgua.css">
+	<link th:if="${resultado.elemento == 'fuego'}" rel="stylesheet" href="/css/resultadoFuego.css">
 </head>
 <body>
     <div class="contenedor">
@@ -46,6 +38,7 @@
 
         <!-- Botón para volver al inicio -->
         <a href="/">Volver al inicio</a>
+		<a href="/bbdd">Base</a>
     </div>
 </body>
 </html>

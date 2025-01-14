@@ -1,15 +1,37 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="es">
 <head>
-    <title>Detalle Resultado</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la Base de Datos</title>
 </head>
 <body>
-    <h1>Detalle del Resultado</h1>
-    <p><strong>ID:</strong> <span th:text="${resultado.id}"></span></p>
-    <p><strong>Nombre:</strong> <span th:text="${resultado.nombre}"></span></p>
-    <p><strong>Elemento:</strong> <span th:text="${resultado.elemento}"></span></p>
-    <p><strong>Puntuación:</strong> <span th:text="${resultado.puntuacion}"></span></p>
-
-    <a href="/">Volver al inicio</a>
+    <h1>Resultados de la Base de Datos</h1>
+    
+    <!-- Verificar si hay resultados -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Elemento</th>
+                <th>Puntuación</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterar sobre los resultados y mostrar los datos -->
+            <th:block th:each="resultado : ${resultados}">
+                <tr>
+                    <td th:text="${resultado.nombre}"></td>
+                    <td th:text="${resultado.elemento}"></td>
+                    <td th:text="${resultado.puntuacion}"></td>
+                    <td th:text="${resultado.descripcion}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+	
+	<a href="/">Volver al inicio</a>
+	<a href="/resultado">Resultado</a>
 </body>
 </html>

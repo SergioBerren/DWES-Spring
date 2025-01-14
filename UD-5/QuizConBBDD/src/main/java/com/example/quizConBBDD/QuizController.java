@@ -54,11 +54,9 @@ public class QuizController {
             return "pregunta" + numeroPregunta;
         }
 
-        // Actualizar la puntuación en la sesión
         int puntuacion = (int) sesion.getAttribute("puntuacion");
         sesion.setAttribute("puntuacion", puntuacion + respuesta);
 
-        // Redirigir a la siguiente pregunta o al resultado final
         if (numeroPregunta < 15) {
             return "redirect:/pregunta/" + (numeroPregunta + 1);
         } else {
@@ -76,15 +74,19 @@ public class QuizController {
         int puntuacion = (int) sesion.getAttribute("puntuacion");
         String elemento = calculoQuiz.determinarElemento(puntuacion);
 
-        // Guardar el resultado en la base de datos
-        Resultado resultado = new Resultado(usuario.getNombre(), elemento, puntuacion);
+        Resultado resultado = new Resultado(usuario.getNombre(), elemento, puntuacion, usuario.getDescripcion());
         resultadoRepository.save(resultado);
 
-        modelo.addAttribute("usuario", usuario);
-        modelo.addAttribute("puntuacion", puntuacion);
-        modelo.addAttribute("elemento", elemento.toLowerCase());
-        modelo.addAttribute("descripcion", usuario.getDescripcion());
-
+        modelo.addAttribute("resultado", resultado);
         return "resultado";
+    }
+    
+    @GetMapping("/bbdd")
+    public String mostrarBBDD(Model modelo) {
+        Iterable<Resultado> resultados = resultadoRepository.findAll();
+        
+        modelo.addAttribute("resultados", resultados);
+        
+        return "bbdd";
     }
 }
