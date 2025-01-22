@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la Base de Datos</title>
+</head>
+<body>
+    <h1>Resultados de la Base de Datos</h1>
+    
+    <!-- Verificar si hay resultados -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Elemento</th>
+                <th>Puntuación</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterar sobre los resultados y mostrar los datos -->
+            <th:block th:each="resultado : ${resultados}">
+                <tr>
+                    <td th:text="${resultado.usuario.nombre}"></td>
+                    <td th:text="${resultado.elemento}"></td>
+                    <td th:text="${resultado.puntuacion}"></td>
+                    <td th:text="${resultado.descripcion}"></td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

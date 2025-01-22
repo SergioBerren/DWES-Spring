@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 8</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+		<h2>Pregunta 8: ¿Qué cualidad valoras más en ti mismo?</h2>
+		<div th:if="${error}" class="error">
+			<p th:text="${error}">Error</p>
+		</div>
+		<form th:action="@{/enviar}" method="post">
+		    <input type="hidden" name="pregunta" value="8">
+		    <label><input type="radio" name="respuesta" value="1"> Estabilidad</label><br>
+		    <label><input type="radio" name="respuesta" value="2"> Libertad</label><br>
+		    <label><input type="radio" name="respuesta" value="3"> Adaptabilidad</label><br>
+		    <label><input type="radio" name="respuesta" value="4"> Intensidad</label><br>
+		    <button type="submit">Siguiente</button>
+		</form>
+
+	</body>
+</html>

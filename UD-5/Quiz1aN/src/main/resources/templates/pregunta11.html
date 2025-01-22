@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 11</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+		<h2>Pregunta 11: ¿Qué tipo de paisaje te atrae más?</h2>
+		<div th:if="${error}" class="error">
+			<p th:text="${error}">Error</p>
+		</div>
+		<form th:action="@{/enviar}" method="post">
+		    <input type="hidden" name="pregunta" value="11">
+			<label><input type="radio" name="respuesta" value="1"> Montañas, bosques y campos abiertos.</label><br>
+			<label><input type="radio" name="respuesta" value="2"> Grandes cielos, vientos suaves y espacios abiertos.</label><br>
+			<label><input type="radio" name="respuesta" value="3"> Playas, ríos o lagos tranquilos y paisajes naturales.</label><br>
+			<label><input type="radio" name="respuesta" value="4"> Volcanes, desiertos o paisajes vibrantes y llenos de energía.</label><br>
+			<button type="submit">Siguiente</button>
+		</form>
+
+	</body>
+</html>

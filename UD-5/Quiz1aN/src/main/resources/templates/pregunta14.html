@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 14</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+    <h1>Pregunta 14: ¿Cómo te sientes hoy?</h1>
+	<div th:if="${error}" class="error">
+		<p th:text="${error}">Error</p>
+	</div>
+    <form th:action="@{/enviar}" method="post">
+		<input type="hidden" name="pregunta" value="14">
+        <div class="slider-container">
+            <label for="slider">1: Muy tranquilo</label>
+			<label for="slider">2: Tranquilo</label>
+			<label for="slider">3: Con energía</label>
+			<label for="slider">4: Con mucha energía</label>
+            <input type="range" id="slider" name="respuesta" min="1" max="4" value="2" step="1" list="tickmarks">
+
+            <!-- Etiquetas de los valores -->
+            <div class="labels">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </div>
+
+            <button type="submit">Siguiente</button>
+        </div>
+    </form>
+</body>
+</html>
+

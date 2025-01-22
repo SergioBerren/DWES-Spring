@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Pregunta 2</title>
+		<link rel="stylesheet" href="/css/preguntas.css">
+	</head>
+	<body>
+		<h2>Pregunta 2: ¿Qué actividades disfrutas? (Puedes seleccionar varias)</h2>
+		<div th:if="${error}" class="error">
+			<p th:text="${error}">Error</p>
+		</div>
+		<form th:action="@{/enviar}" method="post">
+			<label><input type="checkbox" name="respuesta" value="4"> Cocinar</label><br>
+			<input type="hidden" name="pregunta" value="2">
+		    <label><input type="checkbox" name="respuesta" value="1"> Caminar por la naturaleza</label><br>
+		    <label><input type="checkbox" name="respuesta" value="2"> Saltar en paracaídas</label><br>
+		    <label><input type="checkbox" name="respuesta" value="3"> Nadar</label><br>
+		    <button type="submit">Siguiente</button>
+		</form>
+	</body>
+</html>
