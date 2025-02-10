@@ -1,0 +1,10 @@
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Charmander', 'Fuego', 'Lagarto bípedo de tipo Fuego con una llama en la cola que refleja su estado de ánimo.', 1);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Squirtle', 'Agua', 'Pequeña tortuga azul de tipo Agua con un caparazón resistente y gran habilidad para nadar.', 2);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Bulbasaur', 'Planta', 'Reptil cuadrúpedo de tipo Planta/Veneno con una semilla en el lomo que crece con él.', 3);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Cyndaquil', 'Fuego', 'Pequeño mamífero de tipo Fuego con fuego en su espalda que se enciende cuando se emociona o defiende.', 4);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Totodile', 'Agua', 'Cocodrilo azul de tipo Agua con una gran mandíbula y actitud juguetona pero feroz.', 5);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Chikorita', 'Planta', 'Dinosaurio herbívoro de tipo Planta con una hoja en la cabeza que usa para purificar el aire.', 6);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Torchic', 'Fuego', 'Polluelo de tipo Fuego cubierto de plumas anaranjadas que escupe llamas cuando se emociona.', 7);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Mudkip', 'Agua', 'Anfibio de tipo Agua con una aleta en la cabeza que usa como radar para detectar movimientos.', 8);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Treecko', 'Planta', 'Pequeño gecko de tipo Planta con gran agilidad y garras afiladas para trepar árboles.', 9);
+INSERT INTO pokemon(nombre,tipo,descripcion,id) VALUES('Pikachu', 'Electrico', 'Inicial de Pokemon Amarillo y de Pokemon Lets Go Pikachu', 10);

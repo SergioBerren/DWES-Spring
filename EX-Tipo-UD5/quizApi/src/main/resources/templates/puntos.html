@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<ol>
+	<h1>Ranking</h1>
+<li th:each="puntuacion : ${puntuaciones}" th:text="${puntuacion.usuario.nombre} + ':' + ${puntuacion.puntos}" />	
+</ol>
+<hr>
+<ol th:each="usuario : ${usuarios}" >
+	<label th:text="${usuario.nombre} + ' Top 5:'" />
+	<li th:each="puntuacion,pStat : ${usuario.puntos}" th:text="${puntuacion}" th:unless="${pStat.index >= 5}" />
+</ol>
+</body>
+</html>

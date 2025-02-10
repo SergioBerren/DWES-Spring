@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form th:action="(${etapa}==0) ? (@{/nombre}) : (@{/})" method="post">
+	<span th:if="${etapa}==0">
+	 <label for="nombre" th:text="'Dinos tu nombre'" />
+	 <input th:name="nombre" type="text">
+	  <input type="submit" value="Enviar">
+	</span>
+	<span th:if="${etapa}>0 and ${etapa}<=${numPreguntas}">
+    <label for="nombre" th:text="'Pregunta ' + ${etapa}" />
+    <select th:name="puntos">
+		<option th:each="i : ${#numbers.sequence(1,7)}" th:value="${i}*10" th:text="'Respuesta nº ' + ${i}">Opción</option>
+    </select>
+   <input type="hidden" th:name="etapa" th:value="${etapa}+1" />
+   <input type="submit" value="Enviar">
+   </span>
+   <span th:if="${etapa}>${numPreguntas}">
+	   <p th:text="${nombre} + ', tus puntos finales son:' + ${puntos}" />
+	   <a href="/">Volver a empezar</a>
+   </span>
+</form> 
+</body>
+</html>
