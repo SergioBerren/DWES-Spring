@@ -16,6 +16,11 @@ public class Pokemon {
 	private String tipo;
 	private String descripcion;
 
+	
+	public Pokemon() {
+	    // Constructor vacío requerido por JPA
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}

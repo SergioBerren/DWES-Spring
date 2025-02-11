@@ -22,14 +22,14 @@ public class PokemonController {
 
     // Obtener un Pokémon por ID
     @GetMapping("/{id}")
-    public ResponseEntity<Pokemon> getPokemonById(@PathVariable Long id) {
+    public ResponseEntity<Pokemon> getPokemonById(@PathVariable("id") Long id) {
         Optional<Pokemon> pokemon = pokemonRepository.findById(id);
         return pokemon.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     // Buscar Pokémon por nombre
     @GetMapping("/search")
-    public List<Pokemon> getPokemonByNombre(@RequestParam String nombre) {
+    public List<Pokemon> getPokemonByNombre(@RequestParam("nombre") String nombre) {
         return pokemonRepository.findByNombre(nombre);
     }
 
@@ -41,7 +41,7 @@ public class PokemonController {
 
     // Actualizar un Pokémon
     @PutMapping("/{id}")
-    public ResponseEntity<Pokemon> updatePokemon(@PathVariable Long id, @RequestBody Pokemon newPokemon) {
+    public ResponseEntity<Pokemon> updatePokemon(@PathVariable("id") Long id, @RequestBody Pokemon newPokemon) {
         return pokemonRepository.findById(id)
                 .map(pokemon -> {
                     pokemon.setNombre(newPokemon.getNombre());
@@ -54,7 +54,7 @@ public class PokemonController {
 
     // Eliminar un Pokémon
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePokemon(@PathVariable Long id) {
+    public ResponseEntity<Void> deletePokemon(@PathVariable("id") Long id) {
         if (pokemonRepository.existsById(id)) {
             pokemonRepository.deleteById(id);
             return ResponseEntity.noContent().build();

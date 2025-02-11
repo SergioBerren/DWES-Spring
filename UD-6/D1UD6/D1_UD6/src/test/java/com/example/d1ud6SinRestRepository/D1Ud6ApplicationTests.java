@@ -1,4 +1,4 @@
-package com.example.d1ud6;
+package com.example.d1ud6SinRestRepository;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
